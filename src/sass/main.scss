@@ -1,4 +1,36 @@
+
+.image {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+
+  img {
+    border-radius: 50%;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+h1 {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 audio {
   width: 80%;
   height: 10px;
+  margin: 5% 10%;
+}
+
+.results {
+  width: 60%;
+  margin: 0 auto
+}
+
+.searchBar, #search {
+  width: 50%;
+  margin: 0 25%;
 }
