@@ -21,45 +21,51 @@
   100%{ transform: rotateZ(360deg); }
 }
 
-.spinning{
-  animation: turntable 4s linear infinite;
-}
+// *{
+//   border: 1px solid red;
+// }
 
 body {
-  animation: color-me-in 10s infinite;
+  //animation: color-me-in 10s infinite;
+  background: url("http://pre03.deviantart.net/b204/th/pre/i/2014/026/1/e/crumpled_paper_by_vesperity_stock-d73wpje.jpg") no-repeat;
+  background-size: cover;
+  font-family: 'Homemade Apple', cursive;
 }
 
 .navbar {
   display: block;
-  height: 120px;
+  height: 317px;
 }
 
 h1 {
-  margin: 20px 2%;
+  margin: 40px 8%;
   text-align: left;
-  color: #FFE8A3;
-  font-size: 36pt;
+  color: #454343;
+  font-size: 48pt;
   font-weight: normal;
-  position: fixed;
+  position: absolute;
+  top: 38%;
 }
 
 audio {
-  width: 60%;
-  height: 20px;
-  background: #AED6D1;
-  border-radius: 40%;
+float: left;
+background-color: #95B9C7;
+transition: all 0.5s linear;
+box-shadow: 2px 2px 4px 0px #006773;
+border-radius:7px 7px 7px 7px ;
+margin: 0 8%;
 }
 
 .searchBar, #search {
   float: right;
-  margin: 2% 2% 0 2%;
-  border: 5px solid transparent;
-  background: #AED6D1;
-  color: #55706D;
+  margin: 2%;
+  border: 3px dashed #454343;
+  background: transparent;
+  color: #454343;
   border-radius: 40px;
-  padding: 15px 20px;
+  padding: 15px 10px;
   overflow: hidden;
-  width: 200px;
+  width: 250px;
   transition:
     all        1.2s,
     border     0.5s 1.2s,
@@ -67,6 +73,8 @@ audio {
   white-space: nowrap;
   text-indent: 23px;
   font-weight: bold;
+  font-size: 16pt;
+
   span {
     display: inline-block;
     transform: translateX(300px);
@@ -76,13 +84,15 @@ audio {
       opacity 0.1s 0.5s,
       transform 0.4s 0.5s;
   }
+
   &:hover {
-    text-indent: 0;
-    background: #55706D;
-    color: #FFE8A3;
-    width: 250px;
-    border: 10px solid #8DCCC4;
+    text-indent: 12px;
+    background: #F1F3EE;
+    color: #454343;
+    width: 350px;
+    border: 10px dashed #C8B8B8;
     box-shadow: 3px 3px 2px rgba(black, 0.15);
+
     span {
       transform: translateX(0);
       opacity: 1;
@@ -95,12 +105,21 @@ input:focus, button:focus {
 }
 
 .searchResults {
-  display: inline-block;
+  display: inline;
   width: 150px;
   height: 200px;
   overflow: hidden;
-  margin: 0 2%;
+  margin: 2% -3%;
+
+  &:hover {
+      transform: scale(3);
+      bottom: 18%;
+      left: 78%;
+      z-index: 1000;
+      position: fixed;
+  }
 }
+
 
 .image {
   height: 150px;
@@ -125,19 +144,10 @@ input:focus, button:focus {
   }
 }
 
-.songTitle, .bandName {
-  opacity: 0;
-
-  &:hover {
-    opacity: .7;
-    background: black;
-    color: #FFE8A3;
-  }
-}
-
 .results {
-  width: 80%;
-  margin: 0 auto;
+  width: 56%;
+  margin-left: 9%;
+  display: table;
 }
 
 .trackInfo {
@@ -157,4 +167,10 @@ input:focus, button:focus {
     &:hover{
       opacity: .8;
     }
+}
+
+
+audio:hover, audio:focus, audio:active {
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+transform: scale(1.05);
 }

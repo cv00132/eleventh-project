@@ -6,7 +6,7 @@ function resultsTemplate(track) {
     <div class = "searchResults">
       <div class = "image">
         <span>${track.stream}?client_id=${token}</span>
-          <img src="${track.artwork || track.userImage}"  class= "spinning">
+          <img src="${track.artwork || track.userImage}">
           <div class="trackInfo">
             ${track.title}
             <br>
